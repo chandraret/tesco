@@ -1,0 +1,2 @@
+default: -f pretty --format junit --out=TestResults -t ~@manual -t ~@wip -t ~@not_started -t ~@failing -t ~@flickering <%= "-t " + ENV['TAGS'] unless ENV['TAGS'].nil? %>
+tesco_search: -f pretty --format junit --out=TestResults -t @tesco_search -t ~@no_implementation -t ~@not_in_use -t ~@wip -t ~@manual -t ~@flickering -t ~@not_started -t ~@failing  -t ~@regression -t ~@mobile <%= "-t " + ENV['TAGS'] unless ENV['TAGS'].nil? %>

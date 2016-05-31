@@ -1,0 +1,16 @@
+# Access to the data in this file is provided through EnvConfig - see env_config.rb
+
+defaults: &execution_defaults
+  default_config: prod
+
+
+  search: /groceries
+
+pre:
+  <<: *execution_defaults
+  base_url:
+
+prod:
+  <<: *execution_defaults
+  base_url: http://www.tesco.com
+
